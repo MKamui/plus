@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className='w-full flex flex-col items-center text-center py-[5%]'>
         {usersData.filter((user) => user.Email === emailUser).map((data) =>
-            <div className='w-full flex flex-col items-center pt-[2%]'>
+            <div className='w-full flex flex-col items-center pt-[2%]' key={data.Name}>
                 <h3 className='text-xl md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-8xl 4xl:text-9xl 5xl:text-10xl'>Welcome Again</h3>
                 <h3 className='text-xl md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-8xl 4xl:text-9xl 5xl:text-10xl'>{data.Name}</h3>
                 <div className='pt-[5%] w-[80%] grid grid-cols-2 md:grid-cols-3 place-items-center gap-y-[5%] text-sm md:text-xl lg:text-2xl xl:text-3xl 3xl:text-6xl 4xl:text-7xl 5xl:text-8xl'>
